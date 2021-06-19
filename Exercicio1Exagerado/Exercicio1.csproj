@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AssemblyName>Exercicio1</AssemblyName>
+        <RootNamespace>Exercicio1</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Abstracao\Abstracao.csproj" />
+    </ItemGroup>
+
+</Project>

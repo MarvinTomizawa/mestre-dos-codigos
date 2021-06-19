@@ -26,13 +26,53 @@ namespace Exercicio8
             }
 
             Console.WriteLine("Ordem Crescente:");
-            foreach (var valor in entidades.OrderBy(x => x))
+            OrganizaOrdemCrescente(entidades);
+            
+            Console.WriteLine("Ordem Decrescente:");
+            OrganizaOrdemDecrescente(entidades);
+        }
+
+        private static void OrganizaOrdemDecrescente(IList<decimal> entidades)
+        {
+            var entidadesDecrescente = new List<decimal>(entidades);
+
+            for (var i = 0; i < entidades.Count; i++)
+            {
+                for (var j = i; j < entidadesDecrescente.Count; j++)
+                {
+                    if (entidadesDecrescente[i] < entidadesDecrescente[j])
+                    {
+                        var valorAntigo = entidadesDecrescente[i];
+                        entidadesDecrescente[i] = entidadesDecrescente[j];
+                        entidadesDecrescente[j] = valorAntigo;
+                    }
+                }
+            }
+            
+            foreach (var valor in entidadesDecrescente)
             {
                 Console.WriteLine(valor);
             }
+        }
+
+        private static void OrganizaOrdemCrescente(IList<decimal> entidades)
+        {
+            var entidadesCrescente = new List<decimal>(entidades);
+
+            for (var i = 0; i < entidades.Count; i++)
+            {
+                for (var j = i; j < entidadesCrescente.Count; j++)
+                {
+                    if (entidadesCrescente[i] > entidadesCrescente[j])
+                    {
+                        var valorAntigo = entidadesCrescente[i];
+                        entidadesCrescente[i] = entidadesCrescente[j];
+                        entidadesCrescente[j] = valorAntigo;
+                    }
+                }
+            }
             
-            Console.WriteLine("Ordem Decrescente:");
-            foreach (var valor in entidades.OrderByDescending(x => x))
+            foreach (var valor in entidadesCrescente)
             {
                 Console.WriteLine(valor);
             }

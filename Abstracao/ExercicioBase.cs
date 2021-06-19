@@ -28,23 +28,8 @@ namespace Abstracao
         {
             foreach (var parametro in Parametros)
             {
-                var parametroValido = false;
-
-                do
-                {
-                    Console.WriteLine($"\n{parametro.Mensagem}");
-                    var mensagem = Console.ReadLine();
-
-                    try
-                    {
-                        parametro.Valor = (TIpoParametro) Convert.ChangeType(mensagem, typeof(TIpoParametro));
-                        parametroValido = true;
-                    }
-                    catch
-                    {
-                        Console.WriteLine($"\n{parametro.MensagemParametroInvalido}");
-                    }
-                } while (!parametroValido);
+                parametro.Valor =
+                    ValidadorInput.BuscaInput<TIpoParametro>(parametro.Mensagem, parametro.MensagemParametroInvalido);
             }
 
             return Parametros;

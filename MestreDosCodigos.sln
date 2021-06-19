@@ -5,7 +5,7 @@ VisualStudioVersion = 16.6.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{68671C94-7093-4DAF-A6A5-ACD4826AC101}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio1", "Exercicio1Exagerado\Exercicio1.csproj", "{751E454F-72CA-4571-BFB8-C3643F879E1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio1", "Exercicio1\Exercicio1.csproj", "{751E454F-72CA-4571-BFB8-C3643F879E1A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio2", "Exercicio2\Exercicio2.csproj", "{9C85A5BF-9C2E-4890-B289-3BB8120CB246}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio3", "Exercicio3\Exercicio3.csproj", "{376C8AB0-EFF2-45DE-945B-09ACC62E1FDC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio4", "Exercicio4\Exercicio4.csproj", "{722B8AF6-DD4B-4B5C-A0E9-1D7623984547}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio5", "Exercicio5\Exercicio5.csproj", "{88AB2835-0357-45AF-8158-CBF1E3E6E7D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -100,5 +102,17 @@ Global
 		{722B8AF6-DD4B-4B5C-A0E9-1D7623984547}.Release|x64.Build.0 = Release|Any CPU
 		{722B8AF6-DD4B-4B5C-A0E9-1D7623984547}.Release|x86.ActiveCfg = Release|Any CPU
 		{722B8AF6-DD4B-4B5C-A0E9-1D7623984547}.Release|x86.Build.0 = Release|Any CPU
+		{88AB2835-0357-45AF-8158-CBF1E3E6E7D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88AB2835-0357-45AF-8158-CBF1E3E6E7D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88AB2835-0357-45AF-8158-CBF1E3E6E7D6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{88AB2835-0357-45AF-8158-CBF1E3E6E7D6}.Debug|x64.Build.0 = Debug|Any CPU
+		{88AB2835-0357-45AF-8158-CBF1E3E6E7D6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{88AB2835-0357-45AF-8158-CBF1E3E6E7D6}.Debug|x86.Build.0 = Debug|Any CPU
+		{88AB2835-0357-45AF-8158-CBF1E3E6E7D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88AB2835-0357-45AF-8158-CBF1E3E6E7D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88AB2835-0357-45AF-8158-CBF1E3E6E7D6}.Release|x64.ActiveCfg = Release|Any CPU
+		{88AB2835-0357-45AF-8158-CBF1E3E6E7D6}.Release|x64.Build.0 = Release|Any CPU
+		{88AB2835-0357-45AF-8158-CBF1E3E6E7D6}.Release|x86.ActiveCfg = Release|Any CPU
+		{88AB2835-0357-45AF-8158-CBF1E3E6E7D6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

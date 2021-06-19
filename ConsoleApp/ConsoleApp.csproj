@@ -6,10 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Exercicio1Exagerado\Exercicio1.csproj" />
+    <ProjectReference Include="..\Exercicio1\Exercicio1.csproj" />
     <ProjectReference Include="..\Exercicio2\Exercicio2.csproj" />
     <ProjectReference Include="..\Exercicio3\Exercicio3.csproj" />
     <ProjectReference Include="..\Exercicio4\Exercicio4.csproj" />
+    <ProjectReference Include="..\Exercicio5\Exercicio5.csproj" />
   </ItemGroup>
 
 </Project>

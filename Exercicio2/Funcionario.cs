@@ -1,6 +1,6 @@
 ﻿namespace Exercicio2
 {
-    internal class Funcionario
+    public class Funcionario
     {
         public string Nome { get; internal set; }
 

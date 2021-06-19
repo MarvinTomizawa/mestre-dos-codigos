@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Abstracao;
 using Exercicio1;
+using Exercicio2;
 
 namespace ConsoleApp
 {
@@ -14,7 +15,8 @@ namespace ConsoleApp
         {
             _exercicios = new List<Exercicios>
             {
-                new ListaExercicio1()
+                new ListaExercicio1(),
+                new ListaExercicio2()
             };
         }
 

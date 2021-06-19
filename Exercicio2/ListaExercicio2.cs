@@ -11,7 +11,7 @@ namespace Exercicio2
         {
             _exercicios = new List<ExercicioBase<int>>
             {
-                
+                new Exercicio1()
             };
         }
 

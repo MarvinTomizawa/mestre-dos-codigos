@@ -4,7 +4,7 @@ namespace Abstracao
 {
     public static class ValidadorInput
     {
-        public static T BuscaInput<T>(string mensagem, string mensagemErro)
+        public static T BuscaInput<T>(string mensagem, string mensagemErro, Func<T,bool> validador = null)
         {
             var parametroValido = false;
             T inputUsuario = default;
@@ -17,12 +17,18 @@ namespace Abstracao
                 try
                 {
                     inputUsuario = (T) Convert.ChangeType(input, typeof(T));
-                    parametroValido = true;
+                    parametroValido = validador?.Invoke(inputUsuario) ?? true;
                 }
                 catch
                 {
-                    Console.WriteLine($"\n{mensagemErro}");
+                    Console.WriteLine($"\n Houve um erro para processar sua entrada");
                 }
+                
+                if(!parametroValido)
+                {
+                    Console.WriteLine(mensagemErro);
+                }
+                
             } while (!parametroValido);
 
             return inputUsuario;

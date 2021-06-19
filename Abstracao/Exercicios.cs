@@ -4,11 +4,11 @@ namespace Abstracao
 {
     public abstract class Exercicios
     {
+        public abstract int TamanhoDaLista();
+        
         protected abstract void ExecutaExercicioNaLista(int opcao);
         
         protected abstract string BuscaTituloNaLista(int opcao);
-
-        public abstract int TamanhoDaLista();
         
         public void MostraOpcoes(int inicioDeOpcao)
         {

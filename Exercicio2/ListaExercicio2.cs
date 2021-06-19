@@ -1,24 +1,20 @@
 ﻿using System.Collections.Generic;
 using Abstracao;
 
-namespace Exercicio1
+namespace Exercicio2
 {
-    public class ListaExercicio1: Exercicios
+    public class ListaExercicio2: Exercicios
     {
-        private readonly List<ExercicioBase<decimal>> _exercicios;
-        
-        public ListaExercicio1()
+        private readonly List<ExercicioBase<int>> _exercicios;
+
+        public ListaExercicio2()
         {
-            _exercicios = new List<ExercicioBase<decimal>>
+            _exercicios = new List<ExercicioBase<int>>
             {
-                new Exercicio1(),
-                new Exercicio2(),
-                new Exercicio3(),
-                new Exercicio4(),
-                new Exercicio5()
+                
             };
         }
-        
+
         public override int TamanhoDaLista()
         {
             return _exercicios.Count;

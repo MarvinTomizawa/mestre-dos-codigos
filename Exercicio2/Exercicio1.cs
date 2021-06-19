@@ -37,7 +37,6 @@ namespace Exercicio2
                 var funcionarioComMaiorSalario = BuscaFuncionarioComMaiorSalario(funcionarios);
 
                 Console.WriteLine($"Funcionario com maior salário: {funcionarioComMaiorSalario.Nome}, Salario:{funcionarioComMaiorSalario.Salario}");
-                Console.ReadLine();
             };
 
         private static Funcionario BuscaFuncionarioComMaiorSalario(IList<Funcionario> funcionarios)
@@ -72,6 +71,8 @@ namespace Exercicio2
                     Nome = nomeFuncionario,
                     Salario = salarioFuncionario
                 });
+                
+                Console.Clear();
             }
 
             return funcionarios;

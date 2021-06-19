@@ -12,10 +12,9 @@ namespace Abstracao
         
         public void MostraOpcoes(int inicioDeOpcao)
         {
-            for (var i = inicioDeOpcao; i < TamanhoDaLista(); i++)
+            for (var i = 0; i < TamanhoDaLista(); i++)
             {
-                var valorOpcao = i - inicioDeOpcao;
-                Console.WriteLine($"{i} - {BuscaTituloNaLista(valorOpcao)}");
+                Console.WriteLine($"{i + inicioDeOpcao} - {BuscaTituloNaLista(i)}");
             }
         }
 

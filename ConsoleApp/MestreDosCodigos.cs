@@ -50,7 +50,7 @@ namespace ConsoleApp
 
             foreach (var listaExercicio in _exercicios)
             {
-                if (opcao >= acumulado || opcao < acumulado + listaExercicio.TamanhoDaLista())
+                if (opcao >= acumulado && opcao < acumulado + listaExercicio.TamanhoDaLista())
                 {
                     listaExercicio.ExecutaExercicio(opcao - acumulado);
                     break;

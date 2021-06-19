@@ -4,6 +4,7 @@ using Abstracao;
 using Exercicio1;
 using Exercicio2;
 using Exercicio3;
+using Exercicio4;
 
 namespace ConsoleApp
 {
@@ -18,7 +19,8 @@ namespace ConsoleApp
             {
                 new ListaExercicio1(),
                 new ListaExercicio2(),
-                new ListaExercicio3()
+                new ListaExercicio3(),
+                new ListaExercicio4()
             };
         }
 

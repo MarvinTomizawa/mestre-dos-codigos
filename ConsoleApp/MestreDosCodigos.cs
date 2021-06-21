@@ -6,6 +6,7 @@ using Exercicio2;
 using Exercicio3;
 using Exercicio4;
 using Exercicio5;
+using Exercicio6;
 using Exercicio7;
 using Exercicio8;
 using Exercicio9;
@@ -27,6 +28,7 @@ namespace ConsoleApp
                 new ListaExercicio3(),
                 new ListaExercicio4(),
                 new ListaExercicio5(),
+                new ListaExercicio6(),
                 new ListaExercicio7(),
                 new ListaExercicio8(),
                 new ListaExercicio9(),

@@ -11,6 +11,7 @@
     <ProjectReference Include="..\Exercicio3\Exercicio3.csproj" />
     <ProjectReference Include="..\Exercicio4\Exercicio4.csproj" />
     <ProjectReference Include="..\Exercicio5\Exercicio5.csproj" />
+    <ProjectReference Include="..\Exercicio6\Exercicio6.csproj" />
     <ProjectReference Include="..\Exercicio7\Exercicio7.csproj" />
     <ProjectReference Include="..\Exercicio8\Exercicio8.csproj" />
     <ProjectReference Include="..\Exercicio9\Exercicio9.csproj" />

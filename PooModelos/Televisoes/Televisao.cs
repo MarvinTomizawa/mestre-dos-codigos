@@ -39,5 +39,15 @@ namespace PooModelos.Televisoes
         {
             Console.WriteLine($"Televisao: Volume: {Volume} Canal: {Canal}");
         }
+
+        public void MudaParaOCanal(int canal)
+        {
+            if (canal < 1)
+            {
+                return;
+            }
+            
+            Canal = canal;
+        }
     }
 }

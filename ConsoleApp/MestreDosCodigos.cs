@@ -8,6 +8,7 @@ using Exercicio4;
 using Exercicio5;
 using Exercicio7;
 using Exercicio8;
+using Exercicio9;
 
 namespace ConsoleApp
 {
@@ -26,7 +27,8 @@ namespace ConsoleApp
                 new ListaExercicio4(),
                 new ListaExercicio5(),
                 new ListaExercicio7(),
-                new ListaExercicio8()
+                new ListaExercicio8(),
+                new ListaExercicio9()
             };
         }
 

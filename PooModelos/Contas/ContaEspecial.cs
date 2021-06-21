@@ -25,7 +25,7 @@ namespace PooModelos.Contas
 
         public override string ToString()
         {
-            return $"{base.ToString()} Limite: {Limite}";
+            return $"Conta especial {base.ToString()} Limite: {Limite}";
         }
     }
 }

@@ -4,7 +4,7 @@ namespace PooModelos.Contas
 {
     public class ContaCorrente: ContaBancaria
     {
-        public long TaxaDeOperacao { get; set; }
+        public double TaxaDeOperacao { get; set; }
         
         public override double Sacar(double quantidadeSacada)
         {
@@ -27,7 +27,7 @@ namespace PooModelos.Contas
 
         public override string ToString()
         {
-            return $"{base.ToString()} TaxaOperacao:{TaxaDeOperacao}";
+            return $"Conta corrente: {base.ToString()} TaxaOperacao:{TaxaDeOperacao}";
         }
     }
 }

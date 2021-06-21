@@ -11,7 +11,8 @@ namespace ExercicioPoo
         {
             _exercicios = new List<ExercicioBase<int>>
             {
-                new Exercicio2()
+                new Exercicio2(),
+                new Exercicio3()
             };
         }
 

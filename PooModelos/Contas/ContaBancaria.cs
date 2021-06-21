@@ -20,7 +20,7 @@ namespace PooModelos.Contas
 
         public override string ToString()
         {
-            return $"Conta: NumeroConta: {NumeroConta}  Saldo: {Saldo}";
+            return $"NumeroConta: {NumeroConta}  Saldo: {Saldo}";
         }
     }
 }

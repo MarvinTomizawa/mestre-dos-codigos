@@ -6,6 +6,7 @@
 > dotnet sln add ConsoleApp
 
 # Rodando o projeto
+> dotnet run -p ConsoleApp/
 
 # Perguntas Teóricas:
 ## 1 - Em quais linguagens o C# foi inspirado?

@@ -4,7 +4,7 @@ using Abstracao;
 
 namespace ExerciciosConsole.Exercicios
 {
-    internal class Exercicio5: ExercicioBase<long>
+    internal class Exercicio5 : ExercicioBase<long>
     {
         internal Exercicio5()
         {
@@ -13,20 +13,20 @@ namespace ExerciciosConsole.Exercicios
                 Mensagem = "Informe um valor para a",
                 MensagemParametroInvalido = "O valor deve ser long"
             });
-            
+
             Parametros.Add(new ParametroExercicio<long>
             {
                 Mensagem = "Informe um valor para b",
                 MensagemParametroInvalido = "O valor deve ser long"
             });
-            
+
             Parametros.Add(new ParametroExercicio<long>
             {
                 Mensagem = "Informe um valor para c",
                 MensagemParametroInvalido = "O valor deve ser long"
             });
         }
-        
+
         public override string GetTitulo()
             => "Baskhara";
 
@@ -41,11 +41,18 @@ namespace ExerciciosConsole.Exercicios
                 var c = parametros[2].Valor;
 
                 var quadradoB = Math.Pow(b, 2);
-                var delta = Math.Sqrt(quadradoB - 4 * a * c);
+                var valorDelta = quadradoB - 4 * a * c;
 
-                Console.WriteLine(delta);
-                Console.WriteLine($"R1: {(-b + delta) / (2 * a)}");
-                Console.WriteLine($"R2: {(-b - delta) / (2 * a)}");
+                if (valorDelta < 0)
+                {
+                    Console.WriteLine("Não possui soluções reais");
+                }
+                else
+                {
+                    var delta = Math.Sqrt(valorDelta);
+                    Console.WriteLine($"R1: {(-b + delta) / (2 * a)}");
+                    Console.WriteLine($"R2: {(-b - delta) / (2 * a)}");
+                }
             };
     }
 }

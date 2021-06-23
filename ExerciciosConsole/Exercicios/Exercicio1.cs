@@ -38,6 +38,7 @@ namespace ExerciciosConsole.Exercicios
                 Console.WriteLine($"Divisão de {parametro1} por {parametro2} : {parametro1 / parametro2}");
                 Console.WriteLine($"Multiplicação de {parametro1} por {parametro2} : {parametro1 * parametro2}");
                 Console.WriteLine($"Primeiro valor {parametro1} é {(parametro1 % 2 == 0 ? "Par" : "Impar")}");
+                Console.WriteLine($"Segundo valor {parametro2} é {(parametro2 % 2 == 0 ? "Par" : "Impar")}");
                 
             };
     }

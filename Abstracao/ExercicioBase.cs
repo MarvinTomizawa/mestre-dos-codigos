@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Abstracao
 {
-    public abstract class ExercicioBase<TIpoParametro>
+    public abstract class ExercicioBase<TIpoParametro> : IExercicioBase
     {
         protected readonly IList<ParametroExercicio<TIpoParametro>> Parametros =
             new List<ParametroExercicio<TIpoParametro>>();
@@ -11,6 +11,8 @@ namespace Abstracao
         public abstract string GetTitulo();
 
         protected abstract string GetDescricao();
+
+        protected abstract Action<IList<ParametroExercicio<TIpoParametro>>> Action();
 
         public void ExecutaExercicio()
         {
@@ -34,7 +36,5 @@ namespace Abstracao
 
             return Parametros;
         }
-
-        protected abstract Action<IList<ParametroExercicio<TIpoParametro>>> Action();
     }
 }

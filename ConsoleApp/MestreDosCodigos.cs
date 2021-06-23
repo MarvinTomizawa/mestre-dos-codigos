@@ -1,38 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using Abstracao;
-using Exercicio1;
-using Exercicio2;
-using Exercicio3;
-using Exercicio4;
-using Exercicio5;
-using Exercicio6;
-using Exercicio7;
-using Exercicio8;
-using Exercicio9;
 using ExercicioPoo;
+using ExerciciosConsole;
 
 namespace ConsoleApp
 {
     public class MestreDosCodigos
     {
-        private readonly List<Exercicios> _exercicios;
+        private readonly List<ListaExercicio> _exercicios;
         private bool _programaRodando;
         
         public MestreDosCodigos()
         {
-            _exercicios = new List<Exercicios>
+            _exercicios = new List<ListaExercicio>
             {
-                new ListaExercicio1(),
-                new ListaExercicio2(),
-                new ListaExercicio3(),
-                new ListaExercicio4(),
-                new ListaExercicio5(),
-                new ListaExercicio6(),
-                new ListaExercicio7(),
-                new ListaExercicio8(),
-                new ListaExercicio9(),
-                new ListaExercicioPoo()
+                new ListaListaExercicioConsole(),
+                new ListaListaExercicioPoo()
             };
         }
 

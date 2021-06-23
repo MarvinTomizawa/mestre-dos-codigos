@@ -19,7 +19,7 @@ namespace TestesNUnit.POOs
                 Nome = "Teste"
             };
             
-            Assert.AreEqual(21, pessoa.GetIdade());
+            Assert.AreEqual(20, pessoa.GetIdade());
         }
         
     }

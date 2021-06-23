@@ -11,7 +11,7 @@ namespace PooModelos.Pessoas
 
         public  decimal Altura { get; set; }
 
-        public int GetIdade () => new DateTime(DateTime.Now.Subtract(DataNascimento).Ticks).Year;
+        public int GetIdade () => new DateTime(DateTime.Now.Subtract(DataNascimento).Ticks).Year - 1;
         
         public override string ToString()
         {

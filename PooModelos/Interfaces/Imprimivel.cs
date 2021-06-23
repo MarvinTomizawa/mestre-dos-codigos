@@ -2,6 +2,6 @@
 {
     public interface Imprimivel
     {
-        public void MostraDados();
+        void MostraDados();
     }
 }

@@ -11,11 +11,11 @@ namespace PooModelos.Pessoas
 
         public  decimal Altura { get; set; }
 
-        public int Idade => new DateTime(DateTime.Now.Subtract(DataNascimento).Ticks).Year;
+        public int GetIdade () => new DateTime(DateTime.Now.Subtract(DataNascimento).Ticks).Year;
         
         public override string ToString()
         {
-            return $"Pessoa: Nome: {Nome}  DataNascimento: {DataNascimento} Idade: {Idade}  Altura: {Altura}";
+            return $"Pessoa: Nome: {Nome}  DataNascimento: {DataNascimento} Idade: {GetIdade()}  Altura: {Altura}";
         }
 
         public void MostraDados()

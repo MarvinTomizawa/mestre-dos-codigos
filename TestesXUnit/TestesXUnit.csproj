@@ -20,7 +20,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="POOs" />
+      <ProjectReference Include="..\ExerciciosConsole\ExerciciosConsole.csproj" />
+      <ProjectReference Include="..\PooModelos\PooModelos.csproj" />
     </ItemGroup>
 
 </Project>

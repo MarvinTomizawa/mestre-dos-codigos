@@ -40,3 +40,13 @@ Maior utilização containers, maior liberdade para desenvolvimento multi-plataf
 - Maior uso de linha de comando
 - Maior aproveitamento de soluções não dependentes de UI e escalonamento
 - open-source and cross-platform framework 
+
+# Principais ferramentas para utilização de testes no dotnet
+https://docs.microsoft.com/pt-br/dotnet/core/testing/
+
+Algumas ferramentas para testes: 
+
+- xUnit
+- nUnit
+- MSTest
+- SpecFlow 

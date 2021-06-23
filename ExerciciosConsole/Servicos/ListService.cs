@@ -10,7 +10,7 @@ namespace ExerciciosConsole.Servicos
             return entidades.ToArray();
         }
 
-        public static List<int> BuscaItemNaLista(IList<int> entidades, int numeroInformado)
+        public static List<int> BuscaItensNaLista(IList<int> entidades, int numeroInformado)
         {
             return entidades.Where(x => x == numeroInformado).ToList();
         }
@@ -42,7 +42,7 @@ namespace ExerciciosConsole.Servicos
             return novaLista;
         }
 
-        public static List<int> InsereNoInicioDaLista(IList<int> entidades, int numero)
+        public static List<int> AdicionaNoInicioDaLista(IList<int> entidades, int numero)
         {
             var novaLista = entidades.ToList();
             novaLista.Insert(0, numero);

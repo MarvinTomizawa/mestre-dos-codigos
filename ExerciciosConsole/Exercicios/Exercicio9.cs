@@ -73,7 +73,7 @@ namespace ExerciciosConsole.Exercicios
         {
             Console.WriteLine("Retorna apenas o numero informado");
 
-            var listaParaBusca = ListService.BuscaItemNaLista(entidades, numeroInformado);
+            var listaParaBusca = ListService.BuscaItensNaLista(entidades, numeroInformado);
 
             MostraTodosNumerosNaLista(listaParaBusca);
         }
@@ -111,7 +111,7 @@ namespace ExerciciosConsole.Exercicios
         private static void InsereNumeroNoInicioDaLista(IList<int> entidades, int numero)
         {
             Console.WriteLine("Insira um numero no inicio da lista");
-            var novaLista = ListService.InsereNoInicioDaLista(entidades, numero);
+            var novaLista = ListService.AdicionaNoInicioDaLista(entidades, numero);
 
             MostraTodosNumerosNaLista(novaLista);
         }

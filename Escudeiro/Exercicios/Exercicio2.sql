@@ -1,17 +1,13 @@
--- DROP TYPE lending_type;
+-- Feito com postgres
 
 CREATE TYPE lending_type AS ENUM (
 	'borrow',
 	'lend');
 
--- DROP TYPE purchase_status;
-
 CREATE TYPE purchase_status AS ENUM (
 	'not_payed',
 	'payed',
 	'refunded');
-
--- DROP TYPE weekday;
 
 CREATE TYPE weekday AS ENUM (
 	'segunda',
@@ -22,12 +18,6 @@ CREATE TYPE weekday AS ENUM (
 	'sabado',
 	'domingo');
 	
--- public.investment_user definition
-
--- Drop table
-
--- DROP TABLE public.investment_user;
-
 CREATE TABLE public.investment_user (
 	id uuid NOT NULL,
 	username varchar(100) NOT NULL,
@@ -35,14 +25,12 @@ CREATE TABLE public.investment_user (
 	email varchar(150) NOT NULL,
 	created_at timestamp(0) NOT NULL,
 	deleted_at timestamp(0) NULL,
-	CONSTRAINT investment_user_pk PRIMARY KEY (id)
+	id_refer_friend uuid NULL,
+	CONSTRAINT investment_user_pk PRIMARY KEY (id),
+	CONSTRAINT investment_user_fk FOREIGN KEY (id_refer_friend) REFERENCES investment_user(id)
 );
 
--- public.purchase_type definition
-
--- Drop table
-
--- DROP TABLE public.purchase_type;
+CREATE INDEX idx_investment_user ON investment_user(id);
 
 CREATE TABLE public.purchase_type (
 	id uuid NOT NULL,
@@ -53,12 +41,7 @@ CREATE TABLE public.purchase_type (
 	CONSTRAINT purchase_type_pk PRIMARY KEY (id)
 );
 
-
--- public.card definition
-
--- Drop table
-
--- DROP TABLE public.card;
+CREATE INDEX idx_investment_user ON investment_user(id);
 
 CREATE TABLE public.card (
 	id uuid NOT NULL,
@@ -71,12 +54,7 @@ CREATE TABLE public.card (
 	CONSTRAINT card_fk FOREIGN KEY (user_id) REFERENCES investment_user(id)
 );
 
-
--- public.credit_card definition
-
--- Drop table
-
--- DROP TABLE public.credit_card;
+CREATE INDEX idx_card ON "card"(id);
 
 CREATE TABLE public.credit_card (
 	id uuid NOT NULL,
@@ -92,12 +70,7 @@ CREATE TABLE public.credit_card (
 	CONSTRAINT credit_card_fk FOREIGN KEY (card_id) REFERENCES card(id)
 );
 
-
--- public.debit_card definition
-
--- Drop table
-
--- DROP TABLE public.debit_card;
+CREATE INDEX idx_investment_user ON investment_user(id);
 
 CREATE TABLE public.debit_card (
 	id uuid NOT NULL,
@@ -109,12 +82,7 @@ CREATE TABLE public.debit_card (
 	CONSTRAINT debit_card_fk FOREIGN KEY (card_id) REFERENCES card(id)
 );
 
-
--- public.income definition
-
--- Drop table
-
--- DROP TABLE public.income;
+CREATE INDEX idx_debit_card ON debit_card(id);
 
 CREATE TABLE public.income (
 	id uuid NOT NULL,
@@ -131,12 +99,7 @@ CREATE TABLE public.income (
 	CONSTRAINT income_fk FOREIGN KEY (card_id) REFERENCES debit_card(id)
 );
 
-
--- public.person definition
-
--- Drop table
-
--- DROP TABLE public.person;
+CREATE INDEX idx_income ON income(id);
 
 CREATE TABLE public.person (
 	id uuid NOT NULL,
@@ -150,12 +113,7 @@ CREATE TABLE public.person (
 	CONSTRAINT person_fk FOREIGN KEY (account_id) REFERENCES investment_user(id)
 );
 
-
--- public.purchase definition
-
--- Drop table
-
--- DROP TABLE public.purchase;
+CREATE INDEX idx_person ON person(id);
 
 CREATE TABLE public.purchase (
 	id uuid NOT NULL,
@@ -175,12 +133,7 @@ CREATE TABLE public.purchase (
 	CONSTRAINT purchase_fk_1 FOREIGN KEY (card_id) REFERENCES card(id)
 );
 
-
--- public.reserve definition
-
--- Drop table
-
--- DROP TABLE public.reserve;
+CREATE INDEX idx_investment_user ON investment_user(id);
 
 CREATE TABLE public.reserve (
 	id uuid NOT NULL,
@@ -193,12 +146,7 @@ CREATE TABLE public.reserve (
 	CONSTRAINT reserve_fk FOREIGN KEY (user_id) REFERENCES investment_user(id)
 );
 
-
--- public.reserve_type definition
-
--- Drop table
-
--- DROP TABLE public.reserve_type;
+CREATE INDEX idx_reserve ON reserve(id);
 
 CREATE TABLE public.reserve_type (
 	reserve_id uuid NOT NULL,
@@ -209,13 +157,6 @@ CREATE TABLE public.reserve_type (
 	CONSTRAINT reserve_type_fk FOREIGN KEY (purchase_type) REFERENCES purchase_type(id),
 	CONSTRAINT reserve_type_fk_1 FOREIGN KEY (reserve_id) REFERENCES reserve(id)
 );
-
-
--- public.lending definition
-
--- Drop table
-
--- DROP TABLE public.lending;
 
 CREATE TABLE public.lending (
 	id uuid NOT NULL,
@@ -235,3 +176,5 @@ CREATE TABLE public.lending (
 	CONSTRAINT lending_card_fk FOREIGN KEY (card_id) REFERENCES card(id),
 	CONSTRAINT lending_fk FOREIGN KEY (person_id) REFERENCES person(id)
 );
+
+CREATE INDEX idx_lending ON lending(id);
